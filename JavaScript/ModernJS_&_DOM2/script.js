@@ -150,6 +150,7 @@ console.log("Browser Events");
         //first we created a div and we are running 100 itration and inside every one iteration we created a paragraph element and then add into Div. We attach an event listener with every single paragraph element and then we attach the div to document.
 
     //can we optimize the above code?
+    //Event Target & Node Name
 
         let myDiv1 = document.createElement('div'); //creation of div using createElement
 
