@@ -74,6 +74,11 @@ console.log("Today Topic is about Peformance & Event Loop");
 //Single-Threading
     //A single-threaded language is one that can execute only one task at a time. The program will execute the tasks in sequence, and each task must complete before the next task starts.
     //JavaScript is a single threaded langauage. And it process one command at a time.
+
+    //What does it mean when we say JavaScript is single-threaded?
+    //When we say that JavaScript is single-threaded, it means that JavaScript executes code one line at a time, in a sequence. The main thread, where all JavaScript code runs, can only do one task at a time, and there is no way to run multiple pieces of code in parallel on this thread.
+
+    //This might sound limiting, but JavaScript’s design is well-suited for handling many tasks efficiently, thanks to the event loop.
         
         function addPara(){
             let para = document.createElement("h2");
@@ -153,19 +158,100 @@ console.log("Today Topic is about Peformance & Event Loop");
         b();
     
 //Event Loop
-    //Read about it on MDN and Geks for Geeks
+    //An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
+    //The event loop is the secret by which JavaScript gives us an illusion of being multithreaded even though it is single-threaded. 
+    
+    //For illusion demonstration the functioning of the event loop well; refer to the picture event loop.
+
+    //How do Event loops work?
+        // 1.) Call Stack:
+            //JavaScript uses a call stack to keep track of the currently executing function (where the program is in its execution).
+        // 2.) Callback Queue:
+            //Asynchronous operations, such as I/O operations or timers, are handled by the browser or Node.js runtime. When these operations are complete, corresponding functions (callbacks) are placed in the callback queue.
+        // 3.) Event Loop:
+            //The event loop continuously checks the call stack and the callback queue. If the call stack is empty, it takes the first function from the callback queue and pushes it onto the call stack for execution.
+        // 4.) Execution:
+            //The function on top of the call stack is executed. If this function contains asynchronous code, it might initiate further asynchronous operations.
+        // 5.) Callback Execution:
+            //When an asynchronous operation is complete, its callback is placed in the callback queue.
+        // 6.) Repeat:
+            //The event loop continues this process, ensuring that the call stack is always empty before taking the next function from the callback queue.
+    
+    //What is Synchronous And Asynchronous?
+        //Synchronous is a blocking architecture, so the execution of each operation depends on completing the one before it.
+        //Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously.
 
 //setTimeOut() Method
-    //
-        setTimeout(function(){
-            console.log("Hey ! How You Doing"); 
-        }), 5000;
+    //JavaScript setTimeout() method allows you to schedule the execution of a function or the evaluation of a code after a specified delay.
+    //The setTimeout() method calls a function after several milliseconds. setTimeout() is for executing a function once after a specified delay.
 
-        //Majorly Used, Read about this on MDN, Stack Overflow, Median Article and check Philip Robert talk abou this or not in his 26 mminuets video. 
-        setTimeout(function(){
-            console.log("Hey ! How You Doing"); 
-        }), 0;
-        //Whenever you're trying to defer something until the stack is clear
+    //Syntax:
+        //setTimeout(function, delay);
+
+        //Parameters:
+            //function: The function or code snippet to be executed after the specified delay.
+            //delay: The time, in milliseconds, to wait before executing the function.
+        //Return Value:
+            //Returns a Number which is the id of the timer. Use this id with clearTimeout(id) to cancel the timer.
+
+            //Example: 
+                //Example 1: Here, the greet function will be executed after a delay of 2000 milliseconds (2 seconds).
+
+                    function greet() {
+                        console.log("Hello, world!");
+                        }
+                        // Call the greet function after 
+                        // 2000 milliseconds (2 seconds)
+                        setTimeout(greet, 2000);
+
+                //Example 2: Below is the example of popping an up alert, 2 seconds(2000ms) after the user presses the click me button. 
+                        onclick="setTimeout(home, 2000);" > 'Press me';
+                        function home() {
+                            alert('Welcome to Home');
+                        }
+
+                //Exaple 3:            
+                    setTimeout(function(){
+                        console.log("Hey ! How You Doing"); 
+                    }), 5000;
+            
+            //Note: We can stop the execution of the setTimeout() function by using a method called as clearTimeout() or by closing the window.
+
+            //ZERO DELAYS: Majorly Used, Read about this on MDN, Stack Overflow, Median Article and check Philip Robert talk abou this or not in his 26 mminuets video.
+
+                //Zero Delays:
+                    //Zero delay doesn't mean the call back will fire-off after zero milliseconds. Calling setTimeout with a delay of 0 (zero) milliseconds doesn't execute the callback function after the given interval.
+                    //The execution depends on the number of waiting tasks in the queue. In the example below, the message "this is just a message" will be written to the console before the message in the callback gets processed, because the delay is the minimum time required for the runtime to process the request (not a guaranteed time).
+                    //The setTimeout needs to wait for all the code for queued messages to complete even though you specified a particular time limit for your setTimeout.
+                    
+                    setTimeout(function(){
+                        console.log("Hey ! How You Doing"); 
+                    }), 0;
+                    //Whenever you're trying to defer something until the stack is clear
+
+                    (() => {
+                        console.log("this is the start");
+                      
+                        setTimeout(() => {
+                          console.log("Callback 1: this is a msg from call back");
+                        }); // has a default time value of 0
+                      
+                        console.log("this is just a message");
+                      
+                        setTimeout(() => {
+                          console.log("Callback 2: this is a msg from call back");
+                        }, 0);
+                      
+                        console.log("this is the end");
+                      })();
+                      
+                      // "this is the start"
+                      // "this is just a message"
+                      // "this is the end"
+                      // "Callback 1: this is a msg from call back"
+                      // "Callback 2: this is a msg from call back"
+                      
+
 
 
 
