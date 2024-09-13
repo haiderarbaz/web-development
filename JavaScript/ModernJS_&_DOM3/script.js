@@ -181,6 +181,48 @@ console.log("Today Topic is about Peformance & Event Loop");
         //Synchronous is a blocking architecture, so the execution of each operation depends on completing the one before it.
         //Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously.
 
+        //What is Synchronous JavaScript?
+            //In synchronous programming, operations are performed one after the other, in sequence. So, basically each line of code waits for the previous one to finish before proceeding to the next. This means that the program executes in a predictable, linear order, with each task being completed before the next one starts.
+
+                //Example: In this example, we have shown the synchronous nature of JavaScript.
+                    console.log("Hi");
+                    console.log("Geek");
+                    console.log("How are you?");
+                //Example:
+                    console.log('Hey! How you doing?');
+
+                    function sync(){
+                        console.log('first');
+                    }
+                    sync();
+                
+                    console.log('second');
+        
+        //What is Asynchronous JavaScript?
+            //Asynchronous programming, on the other hand, allows multiple tasks to run independently of each other. In asynchronous code, a task can be initiated, and while waiting for it to complete, other tasks can proceed. This non-blocking nature helps improve performance and responsiveness, especially in web applications.
+
+                //Example: In this example, we have shown the Asynchronous nature of JavaScript.
+                    console.log("Hi");
+
+                    setTimeout(() => {
+                        console.log("Hello");
+                    }, 2000);
+                    
+                    console.log("End");                
+                //Example:                     
+                    setTimeout(function(){
+                        console.log('third')
+                    }, 5000)
+                    
+                    console.log('Hey! How you doing?');
+                    
+                        function sync(){
+                            console.log('first');
+                        }
+                        sync();
+                    
+                        console.log('second');
+
 //setTimeOut() Method
     //JavaScript setTimeout() method allows you to schedule the execution of a function or the evaluation of a code after a specified delay.
     //The setTimeout() method calls a function after several milliseconds. setTimeout() is for executing a function once after a specified delay.
