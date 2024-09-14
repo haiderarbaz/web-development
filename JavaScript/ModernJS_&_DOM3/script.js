@@ -156,6 +156,8 @@ console.log("Today Topic is about Peformance & Event Loop");
         }
         a();
         b();
+
+        //Refer image call stack for visual understanding
     
 //Event Loop
     //An event loop is something that pulls stuff out of the queue and places it onto the function execution stack whenever the function stack becomes empty.
@@ -222,6 +224,23 @@ console.log("Today Topic is about Peformance & Event Loop");
                         sync();
                     
                         console.log('second');
+            //Features of async code
+                //Clean and Concise
+                //Eassier debugging
+                //Non-blocking OR Independent processes
+                    //Asynchronous code can send multiple requests to a server at once, increasing throughput.
+                //Better Error handling
+                    //Error handling is important for providing a good user experience. You can use try/catch blocks to catch exceptions thrown by rejected promises. You can also use error-first callbacks, which pass an error object as the first parameter to a callback function.
+                //Concurrent execution
+                    //Asynchronous code enables programs to execute concurrently, which can maximize system resource utilization.
+                //Callbacks
+                    //Callbacks are a type of function that can execute a block of code after another function has executed. 
+                //Promises
+                    //Promises allow code to wait for a function to return a value. 
+                //Async-await
+                    //This feature in JavaScript makes asynchronous code easier to write and read. It's built on top of Promises and allows developers to write asynchronous code that behaves like synchronous code.
+                //Event loop
+                    //The event loop feature measures the progress of tasks and automatically starts the next task once it sees progress. 
 
 //setTimeOut() Method
     //JavaScript setTimeout() method allows you to schedule the execution of a function or the evaluation of a code after a specified delay.
@@ -258,6 +277,7 @@ console.log("Today Topic is about Peformance & Event Loop");
                     }), 5000;
             
             //Note: We can stop the execution of the setTimeout() function by using a method called as clearTimeout() or by closing the window.
+                    //Refer GeeksforGeeks for example.
 
             //ZERO DELAYS: Majorly Used, Read about this on MDN, Stack Overflow, Median Article and check Philip Robert talk abou this or not in his 26 mminuets video.
 
@@ -292,6 +312,14 @@ console.log("Today Topic is about Peformance & Event Loop");
                       // "this is the end"
                       // "Callback 1: this is a msg from call back"
                       // "Callback 2: this is a msg from call back"
+
+//Memory allocation in JavaScript
+    //Heap Memory
+        //This is where JavaScript stores objects and data that are dynamically allocated. Memory in the heap is allocated in an unordered way, which means data can be stored at any available location.
+    //Stack Memory
+        //Stack memory is used to keep track of function calls. It works in a last-in, first-out (LIFO) manner, meaning the last function that gets pushed onto the stack is the first one to be popped off when it’s done.
+
+        //Refer image Memory Allocation for visual understanding
                       
 
 

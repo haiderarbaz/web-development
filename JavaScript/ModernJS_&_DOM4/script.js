@@ -8,16 +8,33 @@ console.log('Hey! How You Doing?')
             //a point where two systems, subjects, organizations, etc. meet and interact.
             //In Computing
             //a device or program enabling a user to communicate with a computer.
+        //An API (Application Programming Interface) is a set of rules and protocols that allow software applications to communicate with each other. APIs are like an interface that defines how two applications interact with each other by exchanging requests and responses.
+        //For example, the weather bureau’s software system contains daily weather data. The weather app on your phone “talks” to this system via APIs and shows you daily weather updates on your phone.
+    //What does API stand for?
+        //API stands for Application Programming Interface. In the context of APIs, the word Application refers to any software with a distinct function. Interface can be thought of as a contract of service between two applications. This contract defines how the two communicate with each other using requests and responses. Their API documentation contains information on how developers are to structure those requests and responses.
+    //How do APIs work?
+        //API architecture is usually explained in terms of client and server. The application sending the request is called the client, and the application sending the response is called the server. So in the weather example, the bureau’s weather database is the server, and the mobile app is the client.
+    //If we talk about the architectures, API’s architectures are: 
+        //REST (Representational State Transfer)
+        //SOAP (Simple Object Access Protocol)
+            //Both define a standard communication protocol for the exchange of messages in XML (Extensible Markup Language).
+    //Steps followed in the working of APIs –
+        //The client initiates the requests via the APIs URI (Uniform Resource Identifier)
+        //Then the server sends the response back to the API with the information
+        //The API makes a call to the server after receiving the request
+        //Finally, the API transfers the data to the client
+    //How is an API Different From a Web Application?
+        //An API acts as an interface that allows proper communication between two programs whereas a web application is a network-based resource responsible for completing a single task. Also, it’s important to know that “All web services are APIs, but not all APIs are web”.
+        //The difference between an API and a web application is that API allows two-way communication and web applications are just a way for users to interact through a web browser. A web application may have an API to complete the requests.
 
-    //get Call
-    //post call
-    //put call
-    //delete call
-
-    //features of async code
-        //clean and concise
-        //better error handling
-        //Eassier debugging
+    //What are REST APIs?
+        //REST stands for Representational State Transfer, and follows the constraints of REST architecture allowing interaction with RESTful web services. It defines a set of functions (GET, PUT, POST, DELETE) that clients use to access server data.
+        //The functions used are:
+            //GET (retrieve a record)
+            //PUT (update a record)
+            //POST (create a record)
+            //DELETE (delete the record)
+            //Its main feature is that REST API is stateless, i.e., the servers do not save clients’ data between requests.
 
 //Promise:
     //We use promise for parallel execution in background.
@@ -162,7 +179,53 @@ console.log('Hey! How You Doing?')
 
     //Fetch API:
         //It returns a promise.
-        //
+        //get call using fetch api.
+            async function userDetail(){
+                let user = await fetch ('https://jsonplaceholder.typicode.com/posts/1');
+                let output = await user.json(); //converting user into json javascript object notation (json).
+                console.log(output);
+            }
+            userDetail();
+        
+            //fetch('url', options) we can send object in options.
+
+        //post call using fetch api.
+            async function helper(){
+                let options = {
+                    method: 'POST',
+                    body: JSON.stringify({
+                      title: 'North',
+                      body: 'Bihar',
+                      userId: 1,
+                      population: '3 crore',
+                    }),
+                    headers: {
+                      'Content-type': 'application/json; charset=UTF-8',
+                    },
+                  }
+    
+                let user1 = await fetch ('https://jsonplaceholder.typicode.com/posts', options);
+                let response = user1.json()
+                return response;
+            }
+            async function utilities(){
+                let ans = await helper();
+                console.log(ans);
+            }
+            utilities();
+
+    //Closures
+            
+            function init(){
+                var name = "Mozilla" //name is a local vriable created by init
+                function displayName(){
+                    //displayName() is the inner function, that forms the closure
+                    console.log(name); //use variable declared in the parent function
+                }
+                displayName();
+            }
+            init();
+            
             
 
 
