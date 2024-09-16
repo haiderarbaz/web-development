@@ -37,8 +37,16 @@ console.log('Hey! How You Doing?')
             //Its main feature is that REST API is stateless, i.e., the servers do not save clients’ data between requests.
 
 //Promise:
+    //The Promise object represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+    //OR
+    //a promise lets you keep working with your code while waiting for something else to finish, like loading data from a server. When the data is ready, the promise will deliver it.
     //We use promise for parallel execution in background.
     //And it's a async code.
+
+    //A promise can be in one of three states:
+        //Fulfilled: The promise has been completed successfully. The data you were waiting for is now available.
+        //Rejected: The promise has failed. Maybe there was a problem, like the server not responding.
+        //Pending: initial state, neither fulfilled nor rejected.
 
         //Example:
             // let myPromise = new Promise(function(resolve, reject){ 

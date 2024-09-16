@@ -229,6 +229,7 @@ console.log("Today Topic is about Peformance & Event Loop");
                 //Eassier debugging
                 //Non-blocking OR Independent processes
                     //Asynchronous code can send multiple requests to a server at once, increasing throughput.
+                    //Asynchronous code allows multiple processes to run independently without blocking each other.
                 //Better Error handling
                     //Error handling is important for providing a good user experience. You can use try/catch blocks to catch exceptions thrown by rejected promises. You can also use error-first callbacks, which pass an error object as the first parameter to a callback function.
                 //Concurrent execution
@@ -241,6 +242,12 @@ console.log("Today Topic is about Peformance & Event Loop");
                     //This feature in JavaScript makes asynchronous code easier to write and read. It's built on top of Promises and allows developers to write asynchronous code that behaves like synchronous code.
                 //Event loop
                     //The event loop feature measures the progress of tasks and automatically starts the next task once it sees progress. 
+            //However, asynchronous programming can also have some limitations, including:
+                //Some tasks may fail.
+                //Using async can be an overhead if a service calls a database that cannot scale.
+                //Development can be cumbersome due to a lot of callbacks and recursive functions.
+                //Search engines may have difficulty crawling web apps with asynchronous loading. 
+                //Code can be complex and difficult to understand.
 
 //setTimeOut() Method
     //JavaScript setTimeout() method allows you to schedule the execution of a function or the evaluation of a code after a specified delay.
