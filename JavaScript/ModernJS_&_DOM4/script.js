@@ -323,12 +323,104 @@ console.log('Hey! How You Doing?')
         //Can Promises be canceled in JavaScript?
             //Promises cannot be canceled natively, but techniques like using an external flag or a custom implementation can simulate cancellation.
 
-    //Async Await:
+    //Async & Await:
+        //Async and Await in JavaScript is used to simplify handling asynchronous operations using promises. By enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage complex asynchronous flows.
         //Special syntax used to work with promises.
         //It always return promise.
         //We can make any function async and can make any function await.
+
+        //Async Function
+            //The async function allows us to write promise-based code as if it were synchronous. This ensures that the execution thread is not blocked.
+
+                //Promise Handling: Async functions always return a promise. If a value is returned that is not a promise, JavaScript automatically wraps it in a resolved promise.
+
+            //Async Syntax
+                //async function myFunction() {
+                //return "Hello";
+                //}
+
+            //Example:
+                //const getData = async () => {
+                    //let data = "Hello World";
+                    //return data;
+                //}
+
+                //getData().then(data => console.log(data));
+
+                //Output
+                    //Hello World
         
-        //How to create async function
+        //Await Keyword
+            //The await keyword is used to wait for a promise to resolve. It can only be used within an async block.
+
+                //Execution Pause: Await makes the code wait until the promise returns a result, allowing for cleaner and more manageable asynchronous code.
+            
+            //Syntax
+                //let value = await promise;
+            
+            //Example
+                //const getData = async () => {
+                    //let y = await "Hello World";
+                    //console.log(y);
+                //}
+
+                //console.log(1);
+                //getData();
+                //console.log(2);
+
+                //Output:
+                    //1
+                    //2
+                    //Hello World
+
+        //The async keyword transforms a regular JavaScript function into an asynchronous function, causing it to return a Promise.
+
+        //The await keyword is used inside an async function to pause its execution and wait for a Promise to resolve before continuing.
+
+        //Async/Await Example:
+            function asynchronous_operational_method() {
+                let first_promise = 
+                    new Promise((resolve, reject) => resolve("Hello"));
+                let second_promise = 
+                    new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve(" How you doing..?");
+                    }, 1000);
+                });
+                let combined_promise = 
+                    Promise.all([first_promise, second_promise]);
+                return combined_promise;
+            }
+            
+            async function display() {
+                let data = await asynchronous_operational_method();
+                console.log(data);
+            }
+            
+            display();
+
+            //Output:
+                //[ 'Hello', ' How you doing..?' ]
+
+            //Explanation:
+                // 1.) Promise Creation:
+                    //Two promises are created: one resolve immediately with “Hello”, and the other resolves after 1 second with ” GeeksforGeeks..”.
+                // 2.)Combining Promises:
+                    //The Promise.all() method combines both promises into a single promise, combined_promise.
+                // 3.)Asynchronous Function:
+                    //The display() function is declared as async, indicating it contains asynchronous operations.
+                // 4.)Awaiting Promise Resolution:
+                    //The await keyword pauses execution until combined_promise is resolved.
+                // 5.)Logging Result:
+                    //The resolved array from combined_promise is logged to the console.
+
+                //Note
+                //To resolve and reject are predefined arguments by JavaScript.
+
+                    //resolve function is used when an asynchronous task is completed and returns the result.
+                    //reject function is used when an asynchronous task fails and returns reasons for failure.
+        
+        //Async/Await Example:
             async function run() {
                 return 7;
             }
@@ -353,6 +445,32 @@ console.log('Hey! How You Doing?')
             return[bW, dW];
             }   
             console.log(utility());
+
+        //Error Handling in Async/Await
+            //JavaScript provides predefined arguments for handling promises: resolve and reject.
+
+                //resolve: Used when an asynchronous task is completed successfully.
+                //reject: Used when an asynchronous task fails, providing the reason for failure.
+            //EXam[ple:
+                async function fetchData() {
+                    try {
+                    let response = await fetch('https://api.example.com/data');
+                    let data = await response.json();
+                    console.log(data);
+                    } catch (error) {
+                    console.error('Error fetching data:', error);
+                    }
+                }
+        
+        //Advantages of Async and Await
+            //Improved Readability: Async and Await allow asynchronous code to be written in a synchronous style, making it easier to read and understand.
+            //Error Handling: Using try/catch blocks with async/await simplifies error handling.
+            //Avoids Callback Hell: Async and Await prevent nested callbacks and complex promise chains, making the code more linear and readable.
+            //Better Debugging: Debugging async/await code is more intuitive since it behaves similarly to synchronous code.
+
+        //Conclusion
+            //Async and Await in JavaScript have revolutionized asynchronous programming by making code more readable and maintainable. By allowing asynchronous code to be written in a synchronous style, they reduce the complexity associated with callbacks and promise chaining. Understanding and using async and await effectively can significantly enhance your JavaScript programming skills, making it easier to handle asynchronous operations in your projects.
+
 
     //Fetch API:
         //It returns a promise.
