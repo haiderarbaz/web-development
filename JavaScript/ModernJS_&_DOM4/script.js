@@ -323,7 +323,7 @@ console.log('Hey! How You Doing?')
         //Can Promises be canceled in JavaScript?
             //Promises cannot be canceled natively, but techniques like using an external flag or a custom implementation can simulate cancellation.
 
-    //Read these docs for Promise>
+    //Refer these docs for Promise:
         //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
         //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 
@@ -514,16 +514,69 @@ console.log('Hey! How You Doing?')
             utilities();
 
     //Closures
+        //How do closure works?
+            //In JavaScript, if you use the function keyword inside another function, you are creating a closure
+            //A regular function created in the global scope can also close over variables
+            //The below code has a closure because the anonymous function function() { console.log(text); } is declared inside another function, sayHello2()       
             
-            function init(){
-                var name = "Mozilla" //name is a local vriable created by init
-                function displayName(){
-                    //displayName() is the inner function, that forms the closure
-                    console.log(name); //use variable declared in the parent function
+                function sayHello2(name) {
+                    var text = 'Hello ' + name; // Local variable
+                    var say = function() { console.log(text); }
+                    return say;
                 }
-                displayName();
-            }
-            init();
+                var say2 = sayHello2('Bob');
+                say2(); // logs "Hello Bob"
+            
+                //If you declare a function within another function, then the local variables can remain accessible after returning from the function you called
+                //This is demonstrated above, because we call the function say2() after we have returned from sayHello2(). The code that we call is still able to reference the variable 'text', which was a local variable of the function sayHello2()
+
+        //A closure is an inner function that has access to the outer (enclosing) function's variables
+        //The closure has three scopes, all part of the same chain: it has access to its own scope (variables defined between its curly brackets), it has access to the outer function's variables, and it has access to the global variables
+        //The inner function has access not only to the outer function’s variables, but also to the outer function's parameters
+
+                function showName (firstName, lastName) {
+                    var nameIntro = "Your name is ";
+                    
+                        // this inner function has access to the outer function's variables, including the parameter​
+                    function makeFullName () {  
+                        return nameIntro + firstName + " " + lastName;
+                    }
+                    
+                    return makeFullName ();
+                }
+                
+                showName ("Arbaz", "Haider"); // Your name is Arbaz Haider
+
+                function surpriseMe(surprise){
+                    var text = "Today you will be surprised with " + surprise;
+                
+                function revealSurprise(){
+                    alert(text);
+                }
+                
+                return revealSurprise;
+                }
+
+                var surprise = surpriseMe("1000 puppy dogs");
+                surprise();
+                //this example uses a closure because:
+                //a function is defined inside another function
+                //the inner function has access to the outer functions variables, 'text'
+                //the outer function's variables can be accessed even after the outer function is called
+
+                function init(){
+                    var name = "Mozilla" //name is a local vriable created by init
+                    function displayName(){
+                        //displayName() is the inner function, that forms the closure
+                        console.log(name); //use variable declared in the parent function
+                    }
+                    displayName();
+                }
+                init();
+
+        //Refer these docs for Closure:
+            //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+            //https://www.geeksforgeeks.org/closure-in-javascript/
             
             
 
