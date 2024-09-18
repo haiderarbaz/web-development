@@ -323,6 +323,10 @@ console.log('Hey! How You Doing?')
         //Can Promises be canceled in JavaScript?
             //Promises cannot be canceled natively, but techniques like using an external flag or a custom implementation can simulate cancellation.
 
+    //Read these docs for Promise>
+        //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Asynchronous/Introducing
+        //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+
     //Async & Await:
         //Async and Await in JavaScript is used to simplify handling asynchronous operations using promises. By enabling asynchronous code to appear synchronous, they enhance code readability and make it easier to manage complex asynchronous flows.
         //Special syntax used to work with promises.
@@ -404,7 +408,7 @@ console.log('Hey! How You Doing?')
 
             //Explanation:
                 // 1.) Promise Creation:
-                    //Two promises are created: one resolve immediately with “Hello”, and the other resolves after 1 second with ” GeeksforGeeks..”.
+                    //Two promises are created: one resolve immediately with “Hello”, and the other resolves after 1 second with ” How you doing..?”.
                 // 2.)Combining Promises:
                     //The Promise.all() method combines both promises into a single promise, combined_promise.
                 // 3.)Asynchronous Function:
