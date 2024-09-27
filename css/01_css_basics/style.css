@@ -1,0 +1,211 @@
+/* CSS */
+/* CSS stands for Cascading Style Sheets */
+/* Like HTML, CSS is not a programming language. It's not a markup language either. */
+/* Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). */
+/* CSS describes how elements should be rendered on screen, on paper, in speech, or on other media. */
+
+/* The whole job of css is */
+/* 1.) Selecting an element */
+/* 2.) Styling an element */
+
+/* Margin: The distance between the element and it's neighbouring element. */
+/* Padding: is the inner space */
+
+/* p {
+  color: red;
+} */
+/* This whole structure is called a ruleset. (The term ruleset is often referred to as just rule.) */
+
+/* Note the names of the individual parts: */
+/* 1.) Selector */
+/* This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled (in this example, <p> elements). To style a different element, change the selector. */
+
+/* 2.) Declaration */
+/* This is a single rule like color: red;. It specifies which of the element's properties you want to style. */
+
+/* 3.) Properties */
+/* These are ways in which you can style an HTML element. (In this example, color is a property of the <p> elements.) In CSS, you choose which properties you want to affect in the rule. */
+/* Like, font size, font weight and so on */
+
+/* 4.) Property value */
+/* To the right of the property—after the colon—there is the property value. This chooses one out of many possible appearances for a given property. (For example, there are many color values in addition to red.) */
+
+/* Note the other important parts of the syntax: */
+
+/* Apart from the selector, each ruleset must be wrapped in curly braces. ({}) */
+/* Within each declaration, you must use a colon (:) to separate the property from its value or values. */
+/* Within each ruleset, you must use a semicolon (;) to separate each declaration from the next one. */
+
+/* To modify multiple property values in one ruleset, write them separated by semicolons, like this: */
+/* p {
+  width: fit-content;
+  border: 1px solid black;
+  background-color: aquamarine;
+} */
+
+/* You can also select multiple elements and apply a single ruleset to all of them. Separate multiple selectors by commas. For example: */
+/* h1,
+span {
+  color: red;
+  background-color: aquamarine;
+} */
+
+/* Selectors */
+/* This is the HTML element name at the start of the ruleset. It defines the element(s) to be styled. */
+/* CSS selectors are used to "find" (or select) the HTML elements you want to style. */
+
+/* Types of Selectors */
+/* 1.) Universal selectore */
+
+/* 2.) Simple selectors (select elements based on name, id, class) */
+/* a.) Elements or Type or Tag */
+/* b.) Class Selector */
+/* c.) ID Seelector */
+
+/* 3.) Combinator selectors (select elements based on a specific relationship between them) */
+/* a.) descendant selector (space) */
+/* b.) child selector (>) */
+/* c.) adjacent sibling selector (+) */
+/* d.) general sibling selector (~) */
+
+/* 4.) Pseudo-class selectors (select elements based on a certain state) */
+
+/* 5.) Pseudo-elements selectors (select and style a part of an element) */
+
+/* 6.) Attribute selectors (select elements based on an attribute or attribute value) */
+
+/* 7.) Grouping Selector */
+
+/* 1.)Universal selectors */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* 2.) Simple selectors */
+/* Select elements based on name, id, class */
+
+/* Types of Simple Selector */
+/* a.) Elements or Type or Tag */
+/* b.) Class Selector */
+/* c.) ID Seelector */
+
+/* a.) Elements or Type or Tag */
+/* The element selector selects HTML elements based on the element name. */
+/* Type selector tell you which element you're selecting on the webpage. */
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* b.) Class Selector */
+/* The class selector selects HTML elements with a specific class attribute. */
+/* To select elements with a specific class, write a period (.) character, followed by the class name. */
+.highlight {
+  background-color: #4fcaed;
+}
+
+/* We can also specify that only specific HTML elements should be affected by a class. */
+/* h3.sel {
+  text-align: center;
+  font-weight: 700px;
+} */
+
+/* Note: A class name cannot start with a number! */
+
+/* c.) ID Seelector */
+/* The id selector uses the id attribute of an HTML element to select a specific element. */
+/* The id of an element is unique within a page, so the id selector is used to select one unique element! /* 
+/* To select an element with a specific id, write a hash (#) character, followed by the id of the element. */
+#header {
+  background-color: #da2929;
+}
+
+/* Note: A id name cannot start with a number! */
+
+/* 2.) Combinator selectors (select elements based on a specific relationship between them) */
+/* A combinator is something that explains the relationship between the selectors. */
+/* A CSS selector can contain more than one simple selector. Between the simple selectors, we can include a combinator. */
+
+/* There are four different combinators in CSS: */
+/* a.) descendant selector (space) */
+/* b.) child selector (>) */
+/* c.) adjacent sibling selector (+) */
+/* d.) general sibling selector (~) */
+
+/* a.) descendant selector (space) */
+/* The descendant selector matches all elements that are descendants of a specified element. */
+article p {
+  background-color: #1a1a1a;
+  font-style: italic;
+  color: #ffffff;
+  padding: 5px;
+}
+
+span p {
+  font-weight: bolder;
+  margin: 10px;
+}
+/* b.) child selector (>) */
+/* The child selector selects all elements that are the children of a specified element. */
+div > p {
+  background-color: #050404;
+  color: rgb(0, 255, 170);
+}
+
+/* c.) adjacent sibling selector (+) */
+/* The adjacent sibling selector is represented by the plus sign (+) and is used to select an element that is directly after another specific element. */
+/* Sibling elements must have the same parent element, and "adjacent" means "immediately following". */
+h1 + p {
+  background-color: #980d77;
+  font-size: xx-large;
+}
+
+/* d.) general sibling selector (~) */
+/* The general sibling selector (~) selects all elements that are next siblings of a specified element. */
+h2 ~ p {
+  background-color: #6616a0;
+}
+
+/* 4.) Pseudo-class selectors (select elements based on a certain state) */
+/* A pseudo-class is used to define a special state of an element.
+
+    For example, it can be used to:
+
+    Style an element when a user mouses over it
+    Style visited and unvisited links differently
+    Style an element when it gets focus */
+a:hover {
+  background-color: #0a7163;
+  text-decoration: none;
+  color: azure;
+  padding: 5px;
+  margin: 4px;
+}
+
+/* 5.) Pseudo-elements selectors (select and style a part of an element) */
+/* A CSS pseudo-element is used to style specified parts of an element.
+
+    For example, it can be used to:
+
+    Style the first letter, or line, of an element
+    Insert content before, or after, the content of an element */
+p::first-letter {
+  font-weight: bold;
+  font-size: 35px;
+}
+
+/* 6.) Attribute selectors (select elements based on an attribute or attribute value) */
+/* The [attribute] selector is used to select elements with a specified attribute. */
+/* The [attribute="value"] selector is used to select elements with a specified attribute and value. */
+input[type="text"] {
+  border: 2px solid #930505;
+}
+
+/* 7.) Grouping Selector */
+h1,
+h2,
+h3 {
+  color: #abda29;
+}
