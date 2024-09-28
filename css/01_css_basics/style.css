@@ -191,6 +191,9 @@ a:hover {
 
     Style the first letter, or line, of an element
     Insert content before, or after, the content of an element */
+
+/* Learn about it on MDN Docs */
+
 p::first-letter {
   font-weight: bold;
   font-size: 35px;
