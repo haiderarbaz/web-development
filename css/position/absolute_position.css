@@ -1,0 +1,27 @@
+div {
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  background-color: cornflowerblue;
+  border: 1px solid black;
+}
+/* #boxC{
+    position: relative;
+    left: 25px;
+    top: 100px;
+} */
+
+/* #boxA{
+    position: fixed;
+} */
+
+#boxC {
+  position: absolute;
+  left: 25px;
+  top: 100px;
+}
+.big {
+  height: 2000px;
+  width: 100vw;
+  background-color: yellowgreen;
+}
