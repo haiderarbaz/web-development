@@ -1,0 +1,41 @@
+What is components?
+Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+
+ Types of components:
+ 1.) Class based Components.
+ Syntax:
+ first:
+    class App extends React.Component{
+        render(){
+            return <h1>Hello There</h1>
+        }
+    }
+
+second:
+    import{Component} from "react";
+    class App extends Component{
+        render(){
+            return <h1>Hello There</h1>
+        }
+    }
+
+ 2.) Fuction based components
+ Syntax:
+    function Component(){
+        return(
+            <div>Component</div>
+        )
+    }
+    export default Component
+
+JSX (JS XML or JavaScript XML): 
+    JSX allows us to write HTML in REact.
+    JSX makes it easier to write and add HTML in React.
+
+    Rules to write JSX:
+    JSX expressions must have one parent element.
+    Must Close the tags.
+
+Expressions In JSX:
+    With JSX you can write expressions inside curly braces. The expression can be a React variable, or property, or any other valid JavaScript expression.
+    JSX will execute the expressions and return the result.
