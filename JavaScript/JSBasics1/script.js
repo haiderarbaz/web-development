@@ -634,11 +634,11 @@ console.log(q ** r);
 // Mixing Types
 // When one operand is a number and the other is a string:
 let x = 12;
-let y = "3";
-console.log(x + y); // Outputs: "123"
-console.log(x - y); // Outputs: 9
-console.log(x * y); // Outputs: 36
-console.log(x / y); // Outputs: 4
+let y1 = "3";
+console.log(x + y1); // Outputs: "123"
+console.log(x - y1); // Outputs: 9
+console.log(x * y1); // Outputs: 36
+console.log(x / y1); // Outputs: 4
 
 // Handling Non-Numeric Strings
 // If the string cannot be converted to a number, JavaScript returns NaN (Not-a-Number).
@@ -707,6 +707,97 @@ let scoreboard = 100;
 console.log(scoreboard);
 
 //Type Conversion
+//Type conversion is an essential concept in JavaScript that allows us to convert one data type into another. This is particularly useful in situations where data from an HTML input or text area needs to be manipulated as a different type, such as converting a string to a number.
+
+// Why Use Type Conversion?
+// Consider an HTML text area that always provides data as a string. If the user enters a number, you might need this number to be treated as a numeric value for calculations. This is where type conversion comes in handy.
+// String to Number: Use Number().
+// Number to String: Use String().
+// To Boolean: Use Boolean().
+
+//String into Number
+const a1 = "10";
+const a2 = "20";
+console.log(Number(a1) + Number(a2));
+
+const c1 = Number(a1);
+const c2 = Number(a2);
+console.log(typeof a1);
+console.log(typeof a2);
+console.log(typeof c1);
+console.log(typeof c2);
+
+//Number into String
+const b1 = 10;
+const b2 = 20;
+console.log(String(b1) + String(b2));
+
+const d1 = String(b1);
+const d2 = String(b2);
+console.log(typeof b1);
+console.log(typeof b2);
+console.log(typeof d1);
+console.log(typeof d2);
+
+//Boolean Conversion
+// Any non-empty string is true.
+// An empty string is false.
+// The number 0 is false.
+// Any other number is true.
+
+const userNaam = "Raj";
+const userUmar = 30;
+const userCity = "Patna";
+const userPhoneNo = 0;
+
+console.log(Boolean(userNaam));
+console.log(Boolean(userUmar));
+console.log(Boolean(userCity));
+console.log("");
+console.log(Boolean(userPhoneNo));
+
+//Example 1: Converting User Input from Text Area
+//Consider a scenario where you get user input from a text area and need to perform arithmetic operations:
+const input = "42"; // User input as a string
+const numberOne = Number(input);
+
+if (!isNaN(numberOne)) {
+  console.log(numberOne + 8); // Outputs: 50
+} else {
+  console.log("Invalid input");
+}
+
+//Readline-Sync
+//Using readline-sync to read user input from the terminal.
+
+const userInputData = require("readline-sync");
+
+//get user's name
+const userNameIs = userInputData.question("May i know your name? ");
+//console.log("Welcome " + userNameIs + " to Siwan");
+console.log(`Welcome ${userNameIs} to Siwan.`);
+
+//get user's age
+const userAgeNumber = userInputData.question("May i know your Age? ");
+console.log(typeof userAgeNumber);
+
+// Check if the conversion was successful
+if (!isNaN(userAgeNumber)) {
+  const currentYear = new Date().getFullYear();
+  const birthYear = currentYear - userAgeNumber;
+  console.log(`You were born in the year ${birthYear}.`);
+} else {
+  console.log("Please enter a valid number for age.");
+}
+
+console.log("Thanks for letting me your age.");
+
+//Exercise
+// To reinforce your understanding, try the following:
+
+// Create a script that takes two user inputs as strings and performs all basic arithmetic operations.
+// Handle cases where the inputs are non-numeric strings and display appropriate messages.
+// Experiment with different types of inputs and observe how JavaScript handles type conversion.
 
 //Assignment
 //
