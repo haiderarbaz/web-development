@@ -1,7 +1,7 @@
-What is components?
-Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+➡️What is components?
+Ans: Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
 
- Types of components:
+➡️Types of components:
  1.) Class based Components.
  Syntax:
  first:
@@ -28,14 +28,94 @@ second:
     }
     export default Component
 
-JSX (JS XML or JavaScript XML): 
-    JSX allows us to write HTML in REact.
+➡️JSX (JS XML or JavaScript XML): 
+    JSX allows us to write HTML in React.
     JSX makes it easier to write and add HTML in React.
 
-    Rules to write JSX:
+➡️Rules to write JSX:
     JSX expressions must have one parent element.
-    Must Close the tags.
+    📀Example:
+        function App(){
+            return <> ➡️This is parent element opening
+                <p></p>
+                <h1></h1>
+                <div></div>
+            </> ➡️This is parent closing
+        }
+    Must Close the tags otherwise you will get nasty error.
+    📀Example:
+        <img/>
+    Instead of class write className beacuse class is a reserve keyword in javascript.(We will get an error in browser console.)
+    📀Example:
+        function App(){
+            <p className="paragraph-tag">Paragraph</p>
+            <h1 className="header-tag>Header</h1>
+        }
+    While creating form in label intead of for write htmlFor beacuse for is a reserve keyword in javasrcipt for loop(for loop).(We will get an error in browser console.)
+    📀Example:
+        function App(){
+            return(
+                <form>
+                <label htmlFor="name">Name</label>
+                <input type="text" id="name/>
+                </form>
+            );
+        }
 
-Expressions In JSX:
+➡️How to render multiple components?
+    Bundel all the components in a parent element or Fragement.
+    📀Example:
+        function App() {
+        return (
+            <>
+            <h1>Hello Arbaz</h1>
+            <Add /> (It's a Components)
+            <Greetings /> (It's a Components)
+            <MyApp /> (It's a Components)
+            <ReactWorks /> (It's a Components)
+            </>
+        );
+        }
+
+➡️What is Fragements?
+Ans: a fragment is a feature that allows developers to group multiple elements together without adding extra nodes to the DOM: 
+    📀Why Use Fragments?
+        Sometimes, you need to return multiple elements from a component, but React requires them to be wrapped in a single parent element. Instead of adding an unnecessary <div> or other tag (which could mess up styling or layout), you use a fragment.
+    📀What it does?
+        Fragments allow developers to return multiple elements from a component without wrapping them in a parent element. 
+    📀How it's used?
+        Fragments can be used to render lists, as props, or as child components. 
+    📀Benefits:
+        Fragments can help keep the DOM structure cleaner and more organized. They also don't affect layout or styles, unlike if the elements were wrapped in another container. 
+    📀How to use it?
+        Fragments can be used with the React.Fragment component, or with the shorter syntax <>...</>. For example, return ( <> <h1>Hello</h1> <h2>World</h2> </> );. 
+    📀Some best practices for using fragments include:
+        Use fragments to avoid extra tags in the DOM.
+        Fragments do not show up in the final HTML.
+        Using fragments to wrap groups of elements that don't need a parent container in the DOM.
+        Avoiding excessive nesting of fragments.
+        Extracting complex groups of elements into separate components.
+    📀Example:
+        First: Here, the <> and </> are shorthand for a fragment. They group <h1> and <p> together without adding anything extra to the DOM.
+            function App() {
+            return (
+                <>
+                <h1>Hello</h1>
+                <p>This is a paragraph.</p>
+                </>
+            );
+            }
+
+            export default App;
+
+        Second: You can also use <React.Fragment> if you prefer the full syntax:
+            <React.Fragment>
+                <h1>Hello</h1>
+                <p>This is a paragraph.</p>
+            </React.Fragment>
+
+
+
+➡️Expressions In JSX:
     With JSX you can write expressions inside curly braces. The expression can be a React variable, or property, or any other valid JavaScript expression.
     JSX will execute the expressions and return the result.
