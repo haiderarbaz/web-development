@@ -803,26 +803,61 @@ console.log("Thanks for letting me your age.");
 //
 
 //Comparision: comparison and equality are different
-// GreaterThan(>), LessThan(<), GreaterThan Equalto(>=), LessThan Equalto(<=), Loose Equality(==), Strict Equality(===), Not Equality(!==)
+// GreaterThan(>),
+//LessThan(<),
+//GreaterThan Equalto(>=),
+//LessThan Equalto(<=),
+//Loose Equality(==):This operator is used to compare the equality of two operands/values. If equal then the condition is true otherwise false.,
+//Strict Equality(===):This operator is used to compare the equality of two operands/values with type. If both value and type are equal then the condition is true otherwise false.,
+//Inequality (!=):This operator is used to compare the inequality of two operands. If equal then the condition is false otherwise true,
+//Not Equality(!==):This operator is used to compare the inequality of two operands/values with type. If both value and type are not equal then the condition is true otherwise false.
 console.log(2 > 3);
 console.log(3 < 4);
 console.log(3 >= 3);
 console.log(5 <= 6);
-console.log(3 === 4);
-console.log(5 === 5);
 console.log(4 !== 5);
-console.log("2" > 1);
-console.log("02" > 1);
-console.log(null > 0); //false
-console.log(null == 0); //false
-console.log(null >= 0); //true
+console.log(null > 0); //false //here null becomes 0
+console.log(null == 0); //false //here null is null
+console.log(null >= 0); //true //here null becomes 0
+console.log(null < 1); //true //here null becomes 0
+//when you compare null with any number null is converted to zero so the value becomes 0
 //the reson is that an equality check == and comparisons ><>=<= work differently.
 //comparisons convert null to a number, treating it as 0.
 //that's why (3) null>=0 is true and (1) null>0 is false.
 
+//String
+console.log("apple" > "banana"); //false
+//here it will check the first character of apple with first character of banana and we all know that a comes before b so it will give false.
+console.log("glow" > "glowing"); //false
+console.log("glowing" > "glow"); //true
+console.log("2" > 1); //true
+console.log("2" > 1);
+console.log("02" > 1);
+//in the 4th case the graeter than operator will convert the string to number then it will comapre.
+
+//ASCII value of A=65 & a=97.
+
 //Equality Operator:
 //Loose Equality(==), Value Check
 //Strict Equality(===), Data type Check as well as Value Check
+console.log("01" == 1); //true
+//== doesn't check the type of value
+console.log("01" === 1); //false
+//=== it check the type of value as well.
+
+console.log(null == undefined); //true
+console.log(null === undefined); //false
+
+console.log(3 === 4);
+console.log(5 === 5);
+
+//Practice Exercise
+console.log(3 <= 5); //true
+console.log("mango" > "banana"); //true
+console.log("2" > "3"); //false
+console.log(undefined == null); //true
+console.log(null === undefined); //false
+console.log(null < 1); //true
 
 //Ternary Operator or Conditional Operator
 let age = 17;
