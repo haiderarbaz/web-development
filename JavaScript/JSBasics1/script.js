@@ -873,36 +873,8 @@ console.log(status);
 //OR(||), Any single condition is true
 //NOT(!)
 
-//Control Statements
-//if-else
-//Syntax
-//if (condition) (use single time)
-{
-  //code--------
-}
-//elseif () (we can use this multiple time)
-{
-  //code--------
-}
-//else (use single time)
-{
-  //code--------
-}
-//Eg:
-let marks = 98;
-if (marks >= 90) {
-  console.log("A");
-} else if (marks >= 80) {
-  console.log("B");
-} else if (marks >= 70) {
-  console.log("C");
-} else if (marks >= 60) {
-  console.log("D");
-} else {
-  console.log("E");
-}
-
 //Switch
+
 //Syntax
 //Switch (expression){
 //case 1 :
