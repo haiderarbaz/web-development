@@ -859,11 +859,6 @@ console.log(undefined == null); //true
 console.log(null === undefined); //false
 console.log(null < 1); //true
 
-//Ternary Operator or Conditional Operator
-let age = 17;
-let status = age >= 18 ? "Yes Vote" : "No Vote";
-console.log(status);
-
 //Bitwise
 //Bitwise AND
 //Bitwise OR
