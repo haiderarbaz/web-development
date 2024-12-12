@@ -859,15 +859,6 @@ console.log(undefined == null); //true
 console.log(null === undefined); //false
 console.log(null < 1); //true
 
-//Bitwise
-//Bitwise AND
-//Bitwise OR
-
-//Logical
-//AND(&&), All condition have to be true
-//OR(||), Any single condition is true
-//NOT(!)
-
 //Switch
 
 //Syntax
