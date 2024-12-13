@@ -753,8 +753,12 @@ const userPhoneNo = 0;
 console.log(Boolean(userNaam));
 console.log(Boolean(userUmar));
 console.log(Boolean(userCity));
-console.log("");
+console.log(Boolean("")); //false
 console.log(Boolean(userPhoneNo));
+console.log(Boolean(" ")); //true
+console.log(Boolean(null)); //false
+console.log(Boolean(undefined)); //false
+console.log(Boolean(0)); //false
 
 //Example 1: Converting User Input from Text Area
 //Consider a scenario where you get user input from a text area and need to perform arithmetic operations:
