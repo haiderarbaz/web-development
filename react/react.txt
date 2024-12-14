@@ -115,5 +115,29 @@ Ans: a fragment is a feature that allows developers to group multiple elements t
             </React.Fragment>
 
 ➡️Expressions In JSX:
-    With JSX you can write expressions inside curly braces. The expression can be a React variable, or property, or any other valid JavaScript expression.
+    Expressions are defined inside curly braces({}). The expression can be a React variable, or property, or any other valid JavaScript expression,including variables, function calls, and operations.
     JSX will execute the expressions and return the result.
+    📀Benefits:
+        Expressions can be used to: 
+            Create dynamic and interactive UIs. 
+            Reuse code. 
+            Conditionally render elements in your UI. 
+    📀Use cases
+        Expressions can be used for: 
+            Displaying dynamic data, such as values from a database or user inputs.
+            Defining event handlers in JSX, such as onClick or onSubmit. 
+    📀React Data Grid
+        Expressions can be used in two ways in React Data Grid: 
+            Column Definition Expressions: Inside column definitions instead of functions for valueGetter, valueSetter, valueFormatter, and valueParser. 
+            Cell Expressions: Inside cells within the grid.
+➡️What is Rect Data Grid?
+    A React Data Grid is a component that displays data in a tabular format and allows users to edit, filter, and sort it. Here are some React Data Grid features: 
+        Data binding: Allows users to quickly bind and display data 
+        Filtering: Similar to Excel's filtering functionality 
+        Sorting: Allows users to customize the sorting order 
+        Row selection: Allows users to select single or multiple rows 
+        Row grouping: Allows users to group rows together 
+        Row pinning: Allows users to pin rows in place 
+        Movable columns: Allows users to move columns around 
+        Grid themes: Allows users to customize the look of the grid, including colors, font, and spacing 
+        Selection aggregates: Allows users to select cells or rows and calculate metrics based on the selected data 
