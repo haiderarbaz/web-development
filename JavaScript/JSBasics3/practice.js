@@ -16,7 +16,7 @@ const dc_heros = ["superman", "flash", "batman"];
 //marvel_heros.push(dc_heros);
 //console.log(marvel_heros);
 //above console will create array inside an array
-//array can take any type of data even array can take array data type like we seen in th above.
+//array can take any type of data even array can take array data type like we seen in the above.
 
 //console.log(marvel_heros[3][1]);
 //it will give 1st value of 3rd element and here 3rd element will be "hulk" and his first value will be flash

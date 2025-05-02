@@ -62,60 +62,6 @@ Math.min(5, 4, 9, 2, 3, 1);
 Math.abs(2);
 Math.abs(-2);
 
-//String-------------------------------------------------------------------------------------------------------------------------------------
-//JavaScript have 2 types of string 1)Primitive, 2)Object
-
-//1) Primitive String
-let lastName = "Haider";
-console.log(typeof lastName); //object
-console.log(lastName[0]); //H
-
-const name = "Arbaz";
-const repoCount = 7;
-console.log(name + repoCount + " value"); //Outadetd way
-console.log(`Hello my name is ${name} and my repo count us ${repoCount}`); //string interpolation: is a programming technique that replaces placeholders in a string with their corresponding values.
-
-//we can change primitive string into object string by using dot notations. JavaScript will treat this string as a object internally beacuse of JavaScript behaviour.
-console.log(lastName.length); //6
-console.log(lastName.includes("de")); //True
-console.log(lastName.startsWith("Ha"));
-console.log(lastName.startsWith("ha")); //output will be false because H is capital and here we give the input as small h.
-console.log(lastName.endsWith("er")); //True
-console.log(lastName.indexOf("d")); //3
-console.log(lastName.toUpperCase()); //HAIDER
-console.log(lastName.toLowerCase()); //haider
-
-let lastName1 = "  Suleman ";
-console.log(lastName1.trim()); //Suleman //it will trim the spaces(starting and ending both)
-console.log(lastName1.replace("Sule", "Us")); //'  Usman '
-
-const url = "https://arbazh.com/arbaz%20haider";
-console.log(url.replace("%20", "-"));
-console.log(url.includes("Arbaz"));
-
-//2) Object String
-let firstName = new String("Arbaz-Ha"); //used string constructor function
-console.log(typeof firstName);
-console.log(firstName.length);
-console.log(firstName[0]);
-console.log(firstName.toUpperCase());
-console.log(firstName.charAt(2));
-console.log(firstName.__proto__);
-console.log(firstName.indexOf("z"));
-console.log(firstName.split("-"));
-
-const newString = firstName.substring(0, 4);
-console.log(newString);
-
-const anotherString = firstName.slice(-8, 4); //it takes negative value also
-console.log(anotherString);
-
-let messsage = "Hey! How You Doing?";
-let words = messsage.split(" ");
-console.log(words); // (4) ['Hey!', 'How', 'You', 'Doing?']
-let wordss = messsage.replace("You", "U");
-console.log(wordss);
-
 //Template literal (We use backtick)---------------------------------------------------------------------------------------------------------------------------
 
 let message = "This is \n my \n first \n Message";
@@ -140,6 +86,7 @@ let text = `Hello Arbaz
 
 console.log(text);
 
+let firstName = "Arbaz Haider";
 let text2 = `Hey ${firstName}
 
       How's your study going On?
