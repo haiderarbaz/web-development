@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Registration Form:</title>
+  </head>
+  <body>
+    <h1>Event Registration</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input
+        type="text"
+        name="username"
+        id="name"
+        placeholder="Enter your name:"
+      />
+
+      <br />
+      <br />
+
+      <label for="emailId">Email:</label>
+      <input
+        type="email"
+        name="useremail"
+        id="emailId"
+        placeholder="Enter your email:"
+      />
+
+      <br />
+      <br />
+
+      <label for="phonenumber">Phone:</label>
+      <input
+        type="tel"
+        name="userphonenumber"
+        id="phonenumber"
+        placeholder="+91"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        required
+        minlength="10"
+        maxlength="13"
+      />
+
+      <br />
+      <br />
+
+      <label for="occupationType">Occupation:</label>
+      <select name="occupationType" id="occupationType">
+        <option value="Other">Other</option>
+        <option value="Other">Engineer</option>
+        <option value="Other">Student</option>
+        <option value="Other">Graduate</option>
+      </select>
+
+      <br />
+      <br />
+      <fieldset>
+        <legend>Topics of Interest:</legend>
+        <label for="html">HTML</label>
+        <input type="checkbox" name="html" id="html" />
+
+        <label for="css">CSS</label>
+        <input type="checkbox" name="css" id="css" />
+
+        <label for="javascript">JavaScript</label>
+        <input type="checkbox" name="javascript" id="javascript" />
+      </fieldset>
+
+      <label for="comments">Comments:</label>
+      <br />
+      <textarea name="textarea" id="comments" cols="30" rows="10"></textarea>
+
+      <input type="submit" value="Register" />
+    </form>
+  </body>
+</html>
