@@ -36,7 +36,7 @@ On Day 01 of 30 days of JavaScript, I started learning the basics of JavaScript.
 
 ## Time Invested
 
-- Approximately 8-10 hours of learning and practice
+- Approximately 8-10 hours of learning, taking notes of it and practice.
 
 ## References
 
