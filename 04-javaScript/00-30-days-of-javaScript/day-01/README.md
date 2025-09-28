@@ -1,4 +1,4 @@
-# Day-01 of 30 days of JavaScript
+# Day-01 of 30-days of JavaScript
 
 ## Overview:
 
