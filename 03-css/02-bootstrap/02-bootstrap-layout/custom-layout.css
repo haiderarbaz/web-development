@@ -1,0 +1,10 @@
+/* Remove default body margin */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* roh height */
+.row {
+  height: 120px;
+}

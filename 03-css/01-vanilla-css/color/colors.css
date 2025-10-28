@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: brown;
+}
+.box {
+  border: 1px solid black;
+  height: 50vh;
+  width: 50vw;
+  /* background-image: linear-gradient(orange,white,green); */
+  /* background-image: repeating-linear-gradient(orange 25%, white 10%, green); */
+  background-image: radial-gradient(circle, red, white, grey);
+  background-image: repeating-radial-gradient(circle, red 10%, white, grey 25%);
+  background-image: conic-gradient(red 45deg, orange, white);
+}
