@@ -1,0 +1,13 @@
+{
+  "name": "note-manager",
+  "version": "1.0.0",
+  "description": "\"A project for practicing file-handling, using file-based CRUD",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "satrt": "node app.js"
+  }
+}

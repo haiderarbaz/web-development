@@ -1,0 +1,14 @@
+{
+  "name": "01-task",
+  "version": "1.0.0",
+  "description": "Tasks for practice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node fileOperations.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
