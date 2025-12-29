@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Type Conversions</title>
+  </head>
+  <body>
+    <h1>Type Conversions:</h1>
+    <ul>
+      <li>
+        <p>
+          The three most widely used type conversions are to string, to number,
+          and to boolean.
+        </p>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="type-conversion">
+        <h2>1. String Conversion</h2>
+        <ul>
+          <li class="string-conversion">
+            <p>
+              String conversion happens when we want to turn something into
+              text.
+            </p>
+          </li>
+          <li class="string-conversion">
+            <p>
+              You can do this with String(value) - just put whatever you want to
+              convert inside the parentheses.
+            </p>
+          </li>
+          <li class="string-conversion">
+            Example:
+            <ol>
+              <li>String(123) becomes "123"</li>
+              <li>String(true) becomes "true"</li>
+              <li>String(false) becomes "false"</li>
+              <li>String(null) becomes "null"</li>
+            </ol>
+          </li>
+          <li class="string-conversion">
+            <a href="./string.js">Check Code File For Code Examples</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul>
+      <li class="type-conversion">
+        <h2>2. Numeric Conversion</h2>
+        <ul>
+          <li class="string-conversion">
+            <p>
+              Numeric conversion in mathematical functions and expressions
+              happens automatically. Except while doing Addition (We have to do
+              it explicitly)
+            </p>
+          </li>
+          <li class="string-conversion">
+            <p>
+              To explicitly convert a value to a number we use (Number(value))
+            </p>
+          </li>
+          <li class="string-conversion">
+            <p>
+              Explicit conversion is usually required when we read a value from
+              a string-based source like a text form but expect a number to be
+              entered.
+            </p>
+          </li>
+          <li class="string-conversion">
+            <p>
+              <strong
+                ><i><u>NOTE:</u></i></strong
+              >
+            </p>
+            <ul>
+              <li>
+                <p>
+                  null and undefined behave differently in numeric conversions
+                </p>
+              </li>
+              <li>
+                <p>null becomes zero while undefined becomes NaN.</p>
+              </li>
+            </ul>
+          </li>
+          <li class="string-conversion">
+            <a href="./number.js">Check Code File For Code Examples</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <ul class="type-conversion">
+      <li>
+        <h2>3. Boolean Conversion</h2>
+        <ul>
+          <li class="string-conversion">
+            <p>Boolean conversion is the simplest one.</p>
+          </li>
+          <li class="string-conversion">
+            <p>It happens in logical operations</p>
+          </li>
+          <li class="string-conversion">
+            <p>
+              But can also be performed explicitly with a call to
+              Boolean(value).
+            </p>
+          </li>
+          <li class="string-conversion">
+            <p>Boolean Conversion Rules:</p>
+            <ol>
+              <li>
+                <p>
+                  Values that are intuitively “empty”, like 0, an empty string,
+                  null, undefined, and NaN, become false.
+                </p>
+              </li>
+              <li>
+                <p>Other values become true.</p>
+              </li>
+            </ol>
+          </li>
+          <li class="string-conversion">
+            <a href="./boolean.js">Check Code File For Code Examples</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <script src="string.js"></script>
+    <script src="number.js"></script>
+    <script src="boolean.js"></script>
+  </body>
+</html>
